@@ -1,0 +1,35 @@
+
+headers = {
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3', 
+    'Accept-Encoding': 'gzip, deflate, br', 
+    'Accept-Language': 'zh-CN,zh;q=0.9', 
+    'Cache-Control': 'max-age=0', 
+    'Connection': 'keep-alive', 
+    'Content-Length': '406', 
+    'Content-Type': 'application/x-www-form-urlencoded', 
+    'Cookie': 'JSESSIONID=2065E65136141736011F0B5E6AF375A7.s7; xibru_dmt="tEo4jia5gMu8OMe0nWZIx9ygHvI4tNE6m2K9RGFhh6o="; usid=HZ27579740D32443ABAA90382FE9BCDF5A; Auth_Token=201906271804-9884957488-b4b831253e79462ef9b650eec8ded1b03e350091; org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE=zh_TW', 
+    'Host': 'ticket.urbtix.hk', 
+    'Origin': 'https://ticket.urbtix.hk', 
+    'Referer': 'https://ticket.urbtix.hk/internet/zh_TW/secure/mailingPayment', 
+    'Upgrade-Insecure-Requests': '1', 
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+    }
+
+
+cookies = 'JSESSIONID=2065E65136141736011F0B5E6AF375A7.s7; xibru_dmt="tEo4jia5gMu8OMe0nWZIx9ygHvI4tNE6m2K9RGFhh6o="; usid=HZ27579740D32443ABAA90382FE9BCDF5A; Auth_Token=201906271804-9884957488-b4b831253e79462ef9b650eec8ded1b03e350091; org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE=zh_TW'
+
+cookie_list = []
+for cook in cookies.split('; '):
+    c = cook.split('=')
+    cookie_list.append({"name":c[0],"value":c[1]})
+
+cookie_list = [{"name":cook.split('=')[0],"value":cook.split('=')[1]} for cook in cookies.split('; ')]
+# cookie_list = [c for cook in cookies.split('; ') for c in cook.split('=')]
+
+print(cookie_list)
+
+# s = ''
+# for key in headers:
+#     s += key + '=' + headers[key]
+
+# print(s)

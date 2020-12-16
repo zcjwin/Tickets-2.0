@@ -1,0 +1,1361 @@
+
+	<!DOCTYPE html>
+	<html lang="zh">
+		<head>
+			<link href="/internet/images/favicon.ico" rel="icon" type="image/x-icon">
+			<link href="/internet/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+			<title>城市售票網 - 搜尋結果</title>
+			<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+			<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+			<meta content="NO-CACHE" http-equiv="PRAGMA">
+			<meta content="NO-STORE" http-equiv="CACHE-CONTROL">
+			<meta content="NO-CACHE" http-equiv="CACHE-CONTROL">
+			<meta content="-1" http-equiv="Expires">
+			<meta name="description" content="城市售票網票務系統是購票通 (香港) 有限公司為康文署發展的專業票務系統">
+			<meta name="keywords" content="票務,網上購票,城市售票網,購票通">
+	<script src="/internet/js/plugin/jquery-1.9.1.min.js?version=1556561236722"></script>
+	<script src="/internet/js/plugin/jquery-ui-1.10.3.custom.min.js?version=1556561236722"></script>
+	<script src="/internet/js/plugin/datajs-1.1.1.min.js?version=1556561236722"></script>
+	<script src="/internet/js/webStore.js?version=1556561236722"></script>
+	<script src="/internet/js/bookmark/bookmarkStore.module.js?version=1556561236722"></script>
+	<script src="/internet/js/cookie.js?version=1556561236722"></script>
+	<script src="/internet/js/common.js?version=1556561236722"></script>
+	<script>
+		var maxSessionDurationInMin = 30;
+		var currentSystemTime = 1561514619730;
+		var urbtixUrl = 'http://www.urbtix.hk';
+		var urbtixHostname = 'www.urbtix.hk';
+		var webRoot = '/internet';
+		var webLocale = 'zh_TW';
+		var storeTimeout = 2700000;
+		var cartItemCount = 0;
+		var jsonSuffix = '?locale='+webLocale+'&'+(new Date).getTime();
+		var isLogin = false;
+		var hasLoginAndPurchaseService = 'true';
+		var salesBreak = {
+			startTime: function(){
+				return '9:40';
+			},
+			
+			endTime: function(){
+				return '10:0';
+			}
+		};
+		WEB_STORE.init();
+	</script>
+		<script>
+			WEB_STORE_FOR_SESSION_BLOCK.clearSessionBlock();
+			
+			var noLoginSessionStartTime = (new Date().getTime());	// for no-cluster
+				noLoginSessionStartTime = 1561514619445;
+				startNoLoginSessionTimer();
+		</script>
+				<script>
+		var month = 06;
+		var year = 2019;
+		var eMagazine = '';
+		var eventTotalCount = '2';
+		var eventListPageSize = 10;
+		var eventListJSON = [{"specialDealVoList":null,"isPurchasable":true,"eventId":38245,"nature":"MARK","performanceDateDisplay":"2019/08/16-18, 20-22, 24-25","ticketPriceDisplayList":null,"eventImagePath":"/internet/p_image/cover/38245.jpg","priceList":[450.0,350.0,250.0],"priceDescriptionList":null,"eventName":"風車草劇團《尋常心》- 葵青劇院場地伙伴計劃節目","venueName":"葵青劇院","venueFacilityName":"葵青劇院演藝廳","eventUrl":"http://www.wmgtheatre.com"},{"specialDealVoList":null,"isPurchasable":true,"eventId":38350,"nature":"MARK","performanceDateDisplay":"2019/08/23-25","ticketPriceDisplayList":null,"eventImagePath":"/internet/p_image/cover/38350.jpg","priceList":[450.0,350.0,250.0],"priceDescriptionList":null,"eventName":"風車草劇團《尋常心》- 葵青劇院場地伙伴計劃節目 (加場)","venueName":"葵青劇院","venueFacilityName":"葵青劇院演藝廳","eventUrl":"http://www.wmgtheatre.com"}];
+		var currentPageNo = 1;
+		var dateCode = '';
+		var performanceJson = [{}];
+	</script>
+	<script src="/internet/js/formValidation.js?version=1556561236722"></script>
+	<script src="/internet/js/eventListForSearch.js?version=1556561236722"></script>
+	<script src="/internet/js/eventSearch.js?version=1556561236722"></script>
+
+	<style>
+		#captcha-image-input-key-container table tr td.loading{
+			background:white url("/internet/images/ajax-loader.gif") no-repeat center !important; 
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="/internet/css/normalize.min.css?version=1556561236722"/>
+	<link rel="stylesheet" type="text/css" href="/internet/css/jquery/jquery-ui-1.10.3.custom.min.css?version=1556561236722"/>
+	<link rel="stylesheet" type="text/css" href="/internet/css/base.css?version=1556561236722"/>
+				<link rel="stylesheet" type="text/css" href="/internet/css/eventSearch.css?version=1556561236722"/>
+	<link rel="stylesheet" type="text/css" href="/internet/css/eventList.css?version=1556561236722"/>
+
+			<script>
+				var is_ie_8 = false;
+			</script>
+			<!--[if lte IE 8]>
+	<script src="/internet/js/scriptForIE.js?version=1556561236722"></script>
+	<script src="/internet/js/plugin/ie-dropdown-width-expand.min.js?version=1556561236722"></script>
+	<script>
+		is_ie_8 = true;
+		fixIE8ObjectKeys();
+		$(document).ready(function() {
+			 jQuery('select:not(#payment-type-select)').ieExpandSelectWidth();
+		});
+	</script>
+			<![endif]-->
+		</head>
+		<body>
+			<h1 class="hidden">城市售票網</h1>
+
+
+
+
+<div class="header">
+	<a id="accessible-link" href="#site-content-main" style="text-decoration:none" title="跳到內容">&nbsp;</a>
+	<div class="banner-blk">
+		<div class="cursor-pointer" id="logo">
+			<img tabindex="0"
+					src="/internet/images/logo/urbtix_logo_tc.png"
+					title="城市售票網"
+					alt="城市售票網" />
+		</div>
+		<!--<img class="header-background" src="/internet/images/logo/urbtix_header.jpg"/>-->
+		<div class="cursor-pointer" id="cityline-logo">
+			<img tabindex="0"
+					src="/internet/images/logo/cityline_logo_tc.gif"
+					title="按此瀏覽購票通網站"
+					alt="按此瀏覽購票通網站" />
+		</div>
+	</div>
+	<div id="header-background"></div>
+	<div class="sub-tool-blk">
+		<div class="lang-tools-blk right">
+			<ul>
+					<li>
+						<a class="change-lang-button" 
+							data-lang_code="en_US"
+							data-form_name=""
+							title="Switch to English"
+							tabindex="0">
+ENG						</a>
+					</li>
+					<li>
+						<a class="change-lang-button"
+							data-lang_code="zh_CN"
+							data-form_name=""
+							title="转换成简体中文"
+							tabindex="0">
+简体						</a>
+					</li>
+			</ul>
+		</div>
+		<div class="font-tools-blk right">
+			<span tabindex="0" 
+					title="字型大小: 原設定"
+					class="font-tools font-default" id="font-default">A</span>
+		   	<span tabindex="0"
+		   			title="字型大小: 較大"
+		   			class="font-tools" id="font-larger">A</span>
+		   	<span tabindex="0"
+		   			title="字型大小: 最大"
+		   			class="font-tools" id="font-largest">A</span>
+		</div>
+	</div>
+	<div class="main-tool-blk">
+		<div class="adv-srch-blk">
+			<form id="eventSearchForm" action="/internet/eventSearch/keyword" method="GET">
+					<table id="search-blk-tbl">
+						<tr>
+							<td>
+								<label class="hidden" for="adv-srch-txt">
+關鍵字搜尋								</label>
+								<input type="text"
+										name="keyword"
+										id="adv-srch-txt"
+										placeholder="關鍵字搜尋" />
+							</td>
+							<td>
+								<img tabindex="0"
+										class="cursor-pointer"
+										id="adv-srch-img"
+										src="/internet/images/main/search_btn.png"
+										alt="按此搜尋"
+										title="按此搜尋"/>
+								<input type="submit" class="hidden" value="搜尋"/>
+							</td>
+							<td>
+								<ol>
+									<li class="vertical-bar"> | </li>
+								</ol>
+							</td>
+							<td>
+								<div id="event-adv-search-btn-blk">
+									<span tabindex="0" id="adv-srch-submit-btn">
+										<strong>進階搜尋</strong>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</table>
+			</form>
+		</div>
+		<div class="nav">
+			<ul class="drop-menu-top">
+				<li>
+					<a tabindex="0">節目</a>
+	<ul class="drop-menu-second">
+					<li class="menu-category-items" data-category_id="cat148">
+						<a tabindex="0" title="音樂">音樂</a>
+							<ul class="drop-menu-third">
+									<li class="menu-category-items" data-category_id="sub1">
+										<a tabindex="0"
+											title="中樂團音樂">
+											中樂團音樂
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub2">
+										<a tabindex="0"
+											title="西樂團音樂">
+											西樂團音樂
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub184">
+										<a tabindex="0"
+											title="中樂器樂">
+											中樂器樂
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub185">
+										<a tabindex="0"
+											title="西方器樂">
+											西方器樂
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub3">
+										<a tabindex="0"
+											title="西洋歌劇">
+											西洋歌劇
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub186">
+										<a tabindex="0"
+											title="室樂">
+											室樂
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub187">
+										<a tabindex="0"
+											title="中樂小組合奏">
+											中樂小組合奏
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub188">
+										<a tabindex="0"
+											title="爵士樂">
+											爵士樂
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub4">
+										<a tabindex="0"
+											title="聲樂／合唱">
+											聲樂／合唱
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub189">
+										<a tabindex="0"
+											title="小組合唱／無伴奏演唱">
+											小組合唱／無伴奏演唱
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub190">
+										<a tabindex="0"
+											title="世界音樂／當代音樂／敲擊音樂">
+											世界音樂／當代音樂／敲擊音樂
+										</a>
+									</li>					
+							</ul>
+					</li>
+					<li class="menu-category-items" data-category_id="cat149">
+						<a tabindex="0" title="中國戲曲">中國戲曲</a>
+							<ul class="drop-menu-third">
+									<li class="menu-category-items" data-category_id="sub148">
+										<a tabindex="0"
+											title="粵劇">
+											粵劇
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub149">
+										<a tabindex="0"
+											title="粵曲">
+											粵曲
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub150">
+										<a tabindex="0"
+											title="其他中國戲曲">
+											其他中國戲曲
+										</a>
+									</li>					
+							</ul>
+					</li>
+					<li class="menu-category-items" data-category_id="cat150">
+						<a tabindex="0" title="舞蹈">舞蹈</a>
+							<ul class="drop-menu-third">
+									<li class="menu-category-items" data-category_id="sub102">
+										<a tabindex="0"
+											title="芭蕾舞">
+											芭蕾舞
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub103">
+										<a tabindex="0"
+											title="現代舞">
+											現代舞
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub191">
+										<a tabindex="0"
+											title="舞蹈劇場">
+											舞蹈劇場
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub101">
+										<a tabindex="0"
+											title="中國舞">
+											中國舞
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub104">
+										<a tabindex="0"
+											title="民族舞">
+											民族舞
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub192">
+										<a tabindex="0"
+											title="社交舞">
+											社交舞
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub193">
+										<a tabindex="0"
+											title="嘻哈／街頭／流行／爵士舞">
+											嘻哈／街頭／流行／爵士舞
+										</a>
+									</li>					
+							</ul>
+					</li>
+					<li class="menu-category-items" data-category_id="cat151">
+						<a tabindex="0" title="展覽">展覽</a>
+					</li>
+					<li class="menu-category-items" data-category_id="cat172">
+						<a tabindex="0" title="電影">電影</a>
+					</li>
+					<li class="menu-category-items" data-category_id="cat173">
+						<a tabindex="0" title="戲劇">戲劇</a>
+							<ul class="drop-menu-third">
+									<li class="menu-category-items" data-category_id="sub153">
+										<a tabindex="0"
+											title="粵語話劇">
+											粵語話劇
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub194">
+										<a tabindex="0"
+											title="非粵語話劇">
+											非粵語話劇
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub195">
+										<a tabindex="0"
+											title="音樂劇場">
+											音樂劇場
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub196">
+										<a tabindex="0"
+											title="音樂劇">
+											音樂劇
+										</a>
+									</li>					
+							</ul>
+					</li>
+					<li class="menu-category-items" data-category_id="cat174">
+						<a tabindex="0" title="跨媒體藝術">跨媒體藝術</a>
+							<ul class="drop-menu-third">
+									<li class="menu-category-items" data-category_id="sub201">
+										<a tabindex="0"
+											title="多媒體">
+											多媒體
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub202">
+										<a tabindex="0"
+											title="形體劇場／默劇">
+											形體劇場／默劇
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub203">
+										<a tabindex="0"
+											title="偶戲">
+											偶戲
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub204">
+										<a tabindex="0"
+											title="魔術">
+											魔術
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub205">
+										<a tabindex="0"
+											title="雜技">
+											雜技
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub206">
+										<a tabindex="0"
+											title="馬戲">
+											馬戲
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub207">
+										<a tabindex="0"
+											title="小丑">
+											小丑
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub156">
+										<a tabindex="0"
+											title="綜合表演">
+											綜合表演
+										</a>
+									</li>					
+							</ul>
+					</li>
+					<li class="menu-category-items" data-category_id="cat196">
+						<a tabindex="0" title="流行音樂會">流行音樂會</a>
+					</li>
+					<li class="menu-category-items" data-category_id="cat198">
+						<a tabindex="0" title="藝術節">藝術節</a>
+							<ul class="drop-menu-third">
+									<li class="menu-category-items" data-category_id="sub197">
+										<a tabindex="0"
+											title="國際綜藝合家歡">
+											國際綜藝合家歡
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub198">
+										<a tabindex="0"
+											title="新視野藝術節">
+											新視野藝術節
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub199">
+										<a tabindex="0"
+											title="世界文化藝術節">
+											世界文化藝術節
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub200">
+										<a tabindex="0"
+											title="中國戲曲節">
+											中國戲曲節
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub232">
+										<a tabindex="0"
+											title="其他藝術節/系列式節目">
+											其他藝術節/系列式節目
+										</a>
+									</li>					
+							</ul>
+					</li>
+					<li class="menu-category-items" data-category_id="cat199">
+						<a tabindex="0" title="合家歡節目">合家歡節目</a>
+					</li>
+					<li class="menu-category-items" data-category_id="cat201">
+						<a tabindex="0" title="全天域電影">全天域電影</a>
+					</li>
+					<li class="menu-category-items" data-category_id="cat202">
+						<a tabindex="0" title="天象節目">天象節目</a>
+					</li>
+					<li class="menu-category-items" data-category_id="cat175">
+						<a tabindex="0" title="其他">其他</a>
+							<ul class="drop-menu-third">
+									<li class="menu-category-items" data-category_id="sub107">
+										<a tabindex="0"
+											title="體育節目">
+											體育節目
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub208">
+										<a tabindex="0"
+											title="觀眾拓展活動">
+											觀眾拓展活動
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub209">
+										<a tabindex="0"
+											title="工作坊／訓練班">
+											工作坊／訓練班
+										</a>
+									</li>					
+									<li class="menu-category-items" data-category_id="sub108">
+										<a tabindex="0"
+											title="其他">
+											其他
+										</a>
+									</li>					
+							</ul>
+					</li>
+	</ul>
+				</li>
+				<li>
+					<a tabindex="0">場地</a>
+	<ul class="drop-menu-second">
+					<li class="menu-region-items" data-region_id="100">
+						<a tabindex="0" title="香港">香港</a>
+					</li>
+					<li class="menu-region-items" data-region_id="101">
+						<a tabindex="0" title="九龍">九龍</a>
+					</li>
+					<li class="menu-region-items" data-region_id="102">
+						<a tabindex="0" title="新界">新界</a>
+					</li>
+	</ul>
+				</li>
+				<li class=" ">
+					<a tabindex="0">顧客服務</a>
+	<ul class="drop-menu-second">
+				<li class="menu-member-items" data-member_item_id="0">
+					<a tabindex="0" data-is_login=0 title="登記成為會員">
+登記成為會員					</a>
+				</li>
+				<li class="menu-member-items" data-member_item_id="1">
+					<a tabindex="0" title="密碼查詢">
+密碼查詢					</a>
+				</li>
+			<li class="menu-member-items" data-member_item_id="2">
+					<a tabindex="0"
+						title="翻查交易資料">
+翻查交易資料					</a>
+				<ul class="drop-menu-third">
+						<li class="menu-member-items" data-member_item_id="3">
+							<a tabindex="0"
+								title="會員">
+會員							</a>
+						</li>
+						<li class="menu-member-items" data-member_item_id="4">
+							<a tabindex="0" 
+								title="非會員">
+非會員							</a>
+						</li>
+				</ul>
+			</li>
+	</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="mem-tools-blk">
+			<div class="shopping-cart mem-tools-item">
+				<a class="shopping-cart-link" tabindex="0" title="購物籃">
+購物籃					
+				</a>
+			</div>
+			<div class="vertical-bar"> | </div>
+			<div class="mem-login-state mem-tools-item" data-is_login=0 data-login_type="nil">
+				<a class="mem-login-state-link" tabindex="0" title="登入">
+					登入
+				</a>
+			</div>
+			<div class="vertical-bar"> | </div>
+			<div class="system-exit mem-tools-item">
+				<a class="system-exit-link" tabindex="0" title="離開">
+離開				</a>
+			</div>
+			<div class="bookmark-blk cursor-pointer">
+				<img src="/internet/images/main/bookmark.png" 
+						alt="到我的書籤"
+						title="到我的書籤"/>
+			</div>
+		</div>
+		
+	</div>
+</div>			<div class="container">
+	<div class="popup-layer hidden" id="search-keyword-alert-layer">
+		<div>搜尋關鍵字過短</div>
+	</div>
+				<img id="site-content-main" 
+						tabindex="0"
+						src="/internet/images/main/skip_to_content.png"
+						title="內容"
+						alt="" />
+
+	<div class="popup-layer hidden" id="session-timer-alert-layer">
+	<span id="session-timer-alert-message"></span>
+	</div>
+				
+
+	<div class="popup-layer hidden" id="simple-alert-box-layer">
+	<span id="simple-alert-message"></span>
+	</div>
+				
+
+	<div class="popup-layer hidden" id="hot-event-alert-box-layer">
+	<span id="hot-event-alert-message">
+			Hot Event is not set.
+	</span>
+	</div>
+				
+	<div class="event-search-title title-txt">搜尋結果</div>
+	<div class="event-search-error-blk hidden">
+沒有節目資料	</div>
+	<div id="validation-error" class="error font-bold">
+	</div>
+	<div class="event-search-filter-blk">
+		<form id="advanceSearchForm" 
+				action="/internet/eventSearch/advanced/formValidate"
+				method="GET"
+				name="advanceSearchForm">
+				<input type="submit" class="hidden" value="確定">
+				<input type="hidden" 
+						class="keyword-search-item" id="keyword"
+						name="keyword"
+						value="风车">
+				<input type="hidden"
+						class="keyword-search-item"
+						id="countryRegionId"
+						name="countryRegionId"
+						>
+				<input type="hidden"
+						class="keyword-search-item"
+						id="venueId"
+						name="venueId"
+						>
+				<input type="hidden"
+						class="keyword-search-item"
+						id="venueFacilityId"
+						name="venueFacilityId"
+						>
+				<input type="hidden"
+						class="keyword-search-item"
+						id="categoryId"
+						name="categoryId"
+						>
+				<input type="hidden"
+						class="keyword-search-item"
+						id="subcategoryId"
+						name="subcategoryId"
+						>
+				<input type="hidden"
+						class="keyword-search-item"
+						id="eventName"
+						name="eventName"
+						>
+				<input type="hidden"
+						class="keyword-search-item"
+						id="presenterName"
+						name="presenterName"
+						>
+				<input type="hidden"
+						class="keyword-search-item"
+						id="performerName"
+						name="performerName"
+						>
+				<input type="hidden"
+						id="minTicketPrice"
+						name="minTicketPrice"
+						>
+				<input type="hidden"
+						id="maxTicketPrice"
+						name="maxTicketPrice"
+						>
+				<input type="hidden"
+						id="dateRangeId"
+						name="dateRangeId"
+						>
+				<input type="hidden"
+						id="fromDate"
+						name="fromDate"
+						>
+				<input type="hidden"
+						id="toDate"
+						name="toDate"
+						>
+				<input type="hidden"
+						id="sortingColumn"
+						name="sortingColumn"
+						value="">
+				<input type="hidden"
+						id="sortingOrder"
+						name="sortingOrder"
+						value="">
+				<input type="hidden"
+						id="countryRegionDisplay"
+						>
+				<input type="hidden"
+						id="venueDisplay"
+						>
+				<input type="hidden"
+						id="subcategoryDisplay"
+						>
+				<input type="hidden"
+						id="displayCounterSalesDate"
+						>
+				<input type="hidden"
+						id="pageNo"
+						name="pageNo">
+				<input type="hidden"
+						id="eventListType"
+						name="eventListType"
+						value="list">		
+			<div class="event-category-blk">
+				<ul>
+							<li class="event-category-items"
+								id="eventCategoryId_148"
+								data-event_category_id="148">
+								<a tabindex="0" title="音樂">音樂</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_149"
+								data-event_category_id="149">
+								<a tabindex="0" title="中國戲曲">中國戲曲</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_150"
+								data-event_category_id="150">
+								<a tabindex="0" title="舞蹈">舞蹈</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_151"
+								data-event_category_id="151">
+								<a tabindex="0" title="展覽">展覽</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_172"
+								data-event_category_id="172">
+								<a tabindex="0" title="電影">電影</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_173"
+								data-event_category_id="173">
+								<a tabindex="0" title="戲劇">戲劇</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_174"
+								data-event_category_id="174">
+								<a tabindex="0" title="跨媒體藝術">跨媒體藝術</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_196"
+								data-event_category_id="196">
+								<a tabindex="0" title="流行音樂會">流行音樂會</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_198"
+								data-event_category_id="198">
+								<a tabindex="0" title="藝術節">藝術節</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_199"
+								data-event_category_id="199">
+								<a tabindex="0" title="合家歡節目">合家歡節目</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_201"
+								data-event_category_id="201">
+								<a tabindex="0" title="全天域電影">全天域電影</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_202"
+								data-event_category_id="202">
+								<a tabindex="0" title="天象節目">天象節目</a>
+							</li>
+							<li class="event-category-items"
+								id="eventCategoryId_175"
+								data-event_category_id="175">
+								<a tabindex="0" title="其他">其他</a>
+							</li>
+				</ul>
+			</div>
+			<div id="venue-blk">
+				<ul class="venue-list">
+					<li class="venue-title">
+						<label for="venueSelect">場地 :</label>
+					</li>
+					<li class="venue-items">
+						<select class="chzn-select"
+								id="venueSelect"
+								name="venueSelect"
+								title="請選擇場地">
+								<option value="x">
+全部場地								</option>
+										<option value="r100">
+											香港
+										</option>
+											<option value="v514">
+												&nbsp;&nbsp;孫中山紀念館
+											</option>					
+											<option value="v390">
+												&nbsp;&nbsp;香港藝術中心
+											</option>					
+											<option value="v368">
+												&nbsp;&nbsp;香港大會堂
+											</option>					
+											<option value="v372">
+												&nbsp;&nbsp;香港電影資料館
+											</option>					
+											<option value="v369">
+												&nbsp;&nbsp;伊利沙伯體育館
+											</option>					
+											<option value="v370">
+												&nbsp;&nbsp;西灣河文娛中心
+											</option>					
+											<option value="v371">
+												&nbsp;&nbsp;上環文娛中心
+											</option>					
+											<option value="v1040">
+												&nbsp;&nbsp;大館
+											</option>					
+											<option value="v854">
+												&nbsp;&nbsp;香港大學
+											</option>					
+											<option value="v637">
+												&nbsp;&nbsp;青年廣場
+											</option>					
+										<option value="r101">
+											九龍
+										</option>
+											<option value="v634">
+												&nbsp;&nbsp;牛棚藝術村
+											</option>					
+											<option value="v590">
+												&nbsp;&nbsp;香港兆基創意書院
+											</option>					
+											<option value="v376">
+												&nbsp;&nbsp;香港體育館
+											</option>					
+											<option value="v375">
+												&nbsp;&nbsp;香港文化中心
+											</option>					
+											<option value="v377">
+												&nbsp;&nbsp;香港科學館
+											</option>					
+											<option value="v380">
+												&nbsp;&nbsp;香港太空館
+											</option>					
+											<option value="v632">
+												&nbsp;&nbsp;賽馬會創意藝術中心
+											</option>					
+											<option value="v378">
+												&nbsp;&nbsp;高山劇場
+											</option>					
+											<option value="v379">
+												&nbsp;&nbsp;牛池灣文娛中心
+											</option>					
+											<option value="v1089">
+												&nbsp;&nbsp;西九文化區
+											</option>					
+											<option value="v1090">
+												&nbsp;&nbsp;戲曲中心
+											</option>					
+											<option value="v730">
+												&nbsp;&nbsp;油麻地戲院
+											</option>					
+										<option value="r102">
+											新界
+										</option>
+											<option value="v387">
+												&nbsp;&nbsp;葵青劇院
+											</option>					
+											<option value="v385">
+												&nbsp;&nbsp;北區大會堂
+											</option>					
+											<option value="v381">
+												&nbsp;&nbsp;沙田大會堂
+											</option>					
+											<option value="v382">
+												&nbsp;&nbsp;大埔文娛中心
+											</option>					
+											<option value="v383">
+												&nbsp;&nbsp;荃灣大會堂
+											</option>					
+											<option value="v384">
+												&nbsp;&nbsp;屯門大會堂
+											</option>					
+											<option value="v386">
+												&nbsp;&nbsp;元朗劇院
+											</option>					
+						</select>
+					</li>
+				</ul>
+			</div>
+			<div id="date-select-blk">
+				<ul class="select-date-list">
+					<li class="select-date-title">
+日期：					</li>
+					<li>
+						<div class="chooseDate">
+		    				<div class="chooseBlk">
+						    	<input type="text"
+						    			name="fromDateInput"
+						    			class="calendar-input cursor-pointer"
+						    			id="fromDateInput"
+						    			title="請選擇節目日期 (由) 或輸入日期(例如 2013/12/30)">
+						      	<img class="calendar-icon cursor-pointer"
+						      			id="calendar_from_input_image"
+						      			alt="日期由"
+						      			title="日期由"
+						      			src="/internet/images/icon_cal.gif" />
+						    </div>
+						</div>
+					</li>
+					<li class="date-to-title">
+至					</li>
+					<li>
+						<div class="chooseDate">
+		    				<div class="chooseBlk">
+							    <input type="text"
+							    		name="toDateInput"
+							    		class="calendar-input cursor-pointer"
+							    		id="toDateInput"
+							    		title="請選擇節目日期 (至) 或輸入日期(例如 2013/12/31)">
+							    <img class="calendar-icon cursor-pointer"
+							    		id="calendar_to_input_image"
+							    		alt="日期至"
+							    		title="日期至"
+							    		src="/internet/images/icon_cal.gif" />
+							</div>
+						</div>
+					</li>
+					<li class="date-confirm-btn">
+	<div class="btn-outer-blk cursor-pointer">
+		<div class="btn-inner-blk">
+			<span tabindex="0">
+確定			</span>
+		</div>
+	</div>
+					</li>
+					<li>
+						<div id="date-error-remark">
+							<span class="error hidden" id="error-from-date">
+請輸入節目日期 (由)。							</span>
+							<span class="error hidden" id="error-to-date">
+請輸入節目日期 (至)。							</span>
+							<span class="error hidden" id="error-date-invaild">
+節目日期輸入不正確。							</span>
+							<span class="error hidden" id="error-date-range-invaild">
+節目日期輸入不正確。							</span>
+						</div>
+					</li>
+				</ul>				
+			</div>
+			<div class="time-date-blk">
+				<ul class="time-range-list">
+					<li class="time-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>	
+					<li class="event-time-items" id="eventTimeId_0" data-event_time_id="0">
+						<a tabindex="0" 
+							title="全部">
+全部						</a>
+					</li>
+					<li class="event-time-items" id="eventTimeId_1" data-event_time_id="1">
+						<a tabindex="0"
+							title="今天">
+今天						</a>
+					</li>
+					<li class="event-time-items" id="eventTimeId_2" data-event_time_id="2">
+						<a tabindex="0"
+							title="明天">
+明天						</a>
+					</li>
+					<li class="event-time-items" id="eventTimeId_3" data-event_time_id="3">
+						<a tabindex="0"
+							title="七日內">
+七日內						</a>
+					</li>
+					<li class="event-time-items" id="eventTimeId_4" data-event_time_id="4">
+						<a tabindex="0" 
+							title="三十日內">
+三十日內						</a>
+					</li>
+				</ul>
+			</div>			
+			<div class="ticket-price-blk">
+				<ul class="ticket-price-range-list">	
+					<li class="ticket-price-title">
+票價：					</li>	
+					<li class="ticket-price-items" 
+						id="ticketPriceId_All"
+						data-ticket_min_price=""
+						data-ticket_max_price="">
+						<a tabindex="0">全部</a>
+					</li>
+							<li class="ticket-price-items" 
+								id="ticketPriceId_0"
+								data-ticket_min_price="0"
+								data-ticket_max_price="100">
+									<a tabindex="0" 
+										title="100元或以下">
+100元或以下									</a>
+							</li>
+							<li class="ticket-price-items" 
+								id="ticketPriceId_101"
+								data-ticket_min_price="101"
+								data-ticket_max_price="300">
+									<a tabindex="0"
+										title="101-300元">
+101-300元									</a>
+							</li>
+							<li class="ticket-price-items" 
+								id="ticketPriceId_301"
+								data-ticket_min_price="301"
+								data-ticket_max_price="500">
+									<a tabindex="0"
+										title="301-500元">
+301-500元									</a>
+							</li>
+							<li class="ticket-price-items" 
+								id="ticketPriceId_501"
+								data-ticket_min_price="501"
+								data-ticket_max_price="2147483647">
+									<a tabindex="0"
+										title="501元或以上">
+501元或以上									</a>
+							</li>
+				</ul>
+			</div>
+			<div class="keyword-blk">
+				<ul class="keyword-title-ul">	
+					<li class="keyword-item hidden">
+						<div class="keyword-title">關鍵字：</div>
+						<div class="keyword-item-blk">
+							&nbsp;&nbsp;<span id="keyword-keyword-text" class="keyword-span"></span>&nbsp;&nbsp;
+							<img class="keyword-img"
+								 alt="移除"
+								 title="移除"
+								 src="/internet/images/button_cancel.gif"
+								 data-keyword_text="keyword"/>
+						</div>
+					</li>	
+					<li class="keyword-item hidden">
+						<div class="keyword-title">節目名稱 :</div>
+						<div class="keyword-item-blk">
+							&nbsp;&nbsp;<span id="keyword-event-name-text" class="keyword-span"></span>&nbsp;&nbsp;
+							<img class="keyword-img"
+								 alt="移除"
+								 title="移除"
+								 src="/internet/images/button_cancel.gif"
+								 data-keyword_text="eventName"/>
+						</div>
+					</li>	
+					<li class="keyword-item hidden">
+						<div class="keyword-title">主辦機構 :</div>
+						<div class="keyword-item-blk">
+							&nbsp;&nbsp;<span id="keyword-presenter-text" class="keyword-span"></span>&nbsp;&nbsp;
+							<img class="keyword-img"
+								 alt="移除"
+								 title="移除"
+								 src="/internet/images/button_cancel.gif"
+								 data-keyword_text="presenterName"/>
+						</div>
+					</li>	
+					<li class="keyword-item hidden">
+						<div class="keyword-title">表演者 :</div>
+						<div class="keyword-item-blk">
+							&nbsp;&nbsp;<span id="keyword-performer-text" class="keyword-span"></span>&nbsp;&nbsp;
+							<img class="keyword-img"
+								 alt="移除"
+								 title="移除"
+								 src="/internet/images/button_cancel.gif"
+								 data-keyword_text="performerName"/>
+						</div>
+					</li>
+					<li class="keyword-item hidden">
+						<div class="keyword-title">場地 :</div>
+						<div class="keyword-item-blk">
+							&nbsp;&nbsp;<span id="keyword-country-region-text" class="keyword-span"></span>&nbsp;&nbsp;
+							<img class="keyword-img"
+								 alt="移除"
+								 title="移除"
+								 src="/internet/images/button_cancel.gif"
+								 data-keyword_text="countryRegionId"/>
+						</div>
+					</li>
+					<li class="keyword-item hidden">
+						<div class="keyword-title">節目類別 :</div>
+						<div class="keyword-item-blk">
+							&nbsp;&nbsp;<span id="keyword-event-category-text" class="keyword-span"></span>&nbsp;&nbsp;
+							<img class="keyword-img"
+								 alt="移除"
+								 title="移除"
+								 src="/internet/images/button_cancel.gif"
+								 data-keyword_text="subcategoryId"/>
+						</div>
+					</li>
+				</ul>
+				<ul class="hidden" id="remove-all-btn-ul">
+					<li id="keyword-remove-btn">
+	<div class="btn-outer-blk cursor-pointer">
+		<div class="btn-inner-blk">
+			<span tabindex="0">
+移除全部			</span>
+		</div>
+	</div>
+					</li>
+				</ul>
+			</div>
+			<br>
+		</form>
+	</div>
+	<br>
+	<br>
+		<div class="event-search-list-type-blk">
+			<span>
+				<span>查看方式:</span>
+				<span tabindex="0" class="event-list-type-selection-blk cursor-pointer" id="event-list-type-list" data-list_type="list">
+					<img class="event-list-type-img"
+						 alt="列表方式"
+						 title="列表方式"
+						 src="/internet/images/event_list.gif"/>
+					<span>列表方式</span>
+				</span>
+				<span tabindex="0" class="event-list-type-selection-blk cursor-pointer" id="event-list-type-graphic" data-list_type="graphic">
+					<img class="event-list-type-img"
+						 alt="圖文方式"
+						 title="圖文方式"
+						 src="/internet/images/event_graphic.gif"/>
+					<span>圖文方式</span>
+				</span>
+				<span tabindex="0" class="event-list-type-selection-blk cursor-pointer" id="event-list-type-calendar" data-list_type="calendar">
+					<img class="event-list-type-img"
+						 alt="日曆方式"
+						 title="日曆方式"
+						 src="/internet/images/event_calendar.gif"/>
+					<span>日曆方式</span>
+				</span>
+			</span>
+		</div>
+	<div class="event-search-list">
+	<table class="event-list-normal-tbl" id="event-list-tbl">
+		<caption class="hidden">節目列表</caption>
+		<tr class="event-list-tbl-header">
+			<th class="tbl-title-background sorting-underline" id="event-date-title">
+				<a tabindex="0" 
+					id="sort-by-date"
+					title="日期">
+日期					<img id="event-date-sort"
+							alt="升/降"
+							title="升/降"
+							src="/internet/images/arrow_up.png" />
+				</a>
+			</th>
+			<th class="tbl-title-background sorting-underline" id="event-eventname-title">
+				<a tabindex="0"
+					id="sort-by-event-name"
+					title="節目名稱">
+節目名稱					<img class="hidden"
+							id="event-name-sort"
+							alt="升/降"
+							title="升/降"
+							src="/internet/images/arrow_down.png" />
+				</a>
+			</th>
+			<th class="tbl-title-background" id="event-venuename-title">
+				<a tabindex="0" 
+					id="sort-by-venue-name" 
+					title="場地名稱">
+場地名稱					<img class="hidden"
+							id="event-venue-sort"
+							alt="升/降"
+							title="升/降"
+							src="/internet/images/arrow_down.png" />
+				</a>
+			</th>
+			<th class="tbl-title-background" id="event-ticket-price-title">
+票價			</th>
+			<th id="event-buy-title"></th>
+		</tr>
+	</table>
+	<div class="popup-layer hidden" id="external-event-alert-layer">
+		<div id="external-event-alert-msg"><p>您剛選取購買的節目門票現保留於舊系統繼續發售，網頁頁面須作重新導向才可讓您繼續瀏覽這項節目資料和購票。</p><br/><p>頁面導向至舊系統時如因系統繁忙而未能成功，請重試。在這新舊系統並行的過渡期對您造成不便，懇請見諒。</p><br/><p>注意：在頁面重新導向至舊系統後，如須返回目前系統，您須要重新登入。</p></div>
+	</div>
+	<div class="popup-layer hidden" id="external-event-confirm-alert-layer">
+		<div id="external-event-confirm--alert-msg">開始頁面重新導向，並釋放所有未完成交易的已選擇座位。</div>
+	</div>
+	<div class="popup-layer hidden" id="external-event-with-items-alert-layer">
+		<div id="external-event-with-items-alert-msg"><p>您剛選取購買的節目門票現保留於舊系統繼續發售，網頁頁面須作重新導向才可讓您繼續瀏覽這項節目資料和購票。</p><br/><p>注意：在頁面重新導向至舊系統前，您須先在目前的新系統完成所有交易或清空購物籃。</p></div>
+	</div>
+		<div class="event-list-paging-blk hidden" id="event-paging">
+		頁 <span id="event-paging-current-page"></span> / 
+		總共 <span id="event-paging-total-page"></span>  頁 / 
+		總共 <span id="event-paging-total-record"></span> 個節目
+		<span class="hidden event-paging-click-enable"
+				tabindex="0"
+				id="event-paging-previous"
+				title="&lt;&lt; 上一頁">
+				<strong>&lt;&lt; 上一頁</strong>
+		</span>	
+		<span class="hidden event-paging-click-enable"
+				tabindex="0"
+				id="event-paging-next"
+				title="下一頁&gt;&gt;">
+				<strong>下一頁&gt;&gt;</strong>
+		</span>
+		</div>
+		<div class="event-list-no-event-blk" id="event-no-event">
+沒有相關節目		</div>
+		<br><br>
+	</div>	
+	<div class="popup-layer hidden" id="category-not-selected-layer">
+		<div id="category-not-selected-msg">請先選擇節目類別</div>
+	</div>
+			</div>
+			<div class="popup-layer hidden" id="exit-alert-layer">
+		     	<span id="exit-alert-message">您的購物籃尚有已選擇之座位, 如您選擇 "確定", 系統會釋放所有座位並自動離開系統。	</span>
+			</div>
+	<div class="popup-layer hidden" id="connection-error-alert-layer">
+		<div id="connection-error-alert-msg">連線逾時,請重試</div>
+	</div>
+
+
+<div class="footer">
+	<hr class="dotted">
+	<div id="footer-first-part">
+		<ul>
+			<li>	<a class="alink-decoration"
+			title="按此瀏覽主頁"
+			href="/internet"
+>主頁</a>
+	<span>&nbsp;&sdot;&nbsp;</span>
+</li>
+			<li>	<a class="alink-decoration"
+			title="按此瀏覽關於我們"
+			href="/internet/footer/aboutUs"
+>關於我們</a>
+	<span>&nbsp;&sdot;&nbsp;</span>
+</li>
+			<li>	<a class="alink-decoration"
+			title="按此瀏覽服務收費詳情"
+			href="/internet/footer/serviceCharge"
+>服務收費</a>
+	<span>&nbsp;&sdot;&nbsp;</span>
+</li>
+			<li>	<a class="alink-decoration"
+			title="按此瀏覽售票處(opens new window 在新視窗開啟 在新视窗开启)"
+			href="http://www.lcsd.gov.hk/tc/ticket/counter.html"
+			target="_blank"
+		>售票處</a>
+	<span>&nbsp;&sdot;&nbsp;</span>
+</li>
+			<li>	<a class="alink-decoration"
+			title="按此瀏覽自助取票機(opens new window 在新視窗開啟 在新视窗开启)"
+			href="http://www.cityline.com/chi/helpdesk/locationOfuTdm.jsp"
+			target="_blank"
+		>自助取票機</a>
+	<span>&nbsp;&sdot;&nbsp;</span>
+</li>
+			<li>	<a class="alink-decoration"
+			title="按此瀏覽每月節目表(opens new window 在新視窗開啟 在新视窗开启)"
+			href="http://www.lcsd.gov.hk/tc/ticket/urbtix_events/monthly_programme.html"
+			target="_blank"
+		>每月節目表</a>
+	<span>&nbsp;&sdot;&nbsp;</span>
+</li>
+			<li>	<a class="alink-decoration"
+			title="按此瀏覽保安及私隱"
+			href="/internet/footer/securityAndPrivacy"
+>保安及私隱</a>
+	<span>&nbsp;&sdot;&nbsp;</span>
+</li>
+			<li>	<a class="alink-decoration"
+			title="按此瀏覽購票條款及細則"
+			href="/internet/footer/tnc"
+>購票條款及細則</a>
+	<span>&nbsp;&sdot;&nbsp;</span>
+</li>
+			<li>	<a class="alink-decoration"
+			title="按此瀏覽常見問題"
+			href="/internet/footer/faq"
+>常見問題</a>
+	<span>&nbsp;&sdot;&nbsp;</span>
+</li>
+			<li>	<a class="alink-decoration"
+			title="按此瀏覽聯絡我們"
+			href="/internet/footer/contactUs"
+>聯絡我們</a>
+	<span>&nbsp;&sdot;&nbsp;</span>
+</li>
+			<li>	<a class="alink-decoration"
+			title="按此瀏覽網站地圖 Site Map"
+			href="/internet/footer/siteMap"
+>網站地圖</a>
+	
+</li>
+		</ul>
+	</div>
+	<div id="footer-second-part">
+		<div>
+			<span id="footer-copyright">城市售票網系統由購票通提供<br/>&copy; 購票通﹝香港﹞有限公司 1998 - 2019. 版權所有. </span>
+		</div>
+		<div id="footer-second-part-img">
+	<a title="按此瀏覽無障礙網頁守則(opens new window 在新視窗開啟 在新视窗开启)"
+		href="http://www.w3.org/WAI/WCAG2AA-Conformance"
+		target="_blank"
+		>
+		<img width="70" 
+				height="31"
+				alt="按此瀏覽無障礙網頁守則"
+				src="/internet/images/footer/wcag.png" />
+	</a>
+	<a title="按此瀏覽電子雜誌(opens new window 在新視窗開啟 在新视窗开启)"
+		href="http://www.lcsd.gov.hk/tc/emagazine/"
+		target="_blank"
+		>
+		<img width="70" 
+				height="31"
+				alt="按此瀏覽電子雜誌"
+				src="/internet/images/footer/emag_logo.png" />
+	</a>
+	<a title="按此瀏覽香港政府一站通(opens new window 在新視窗開啟 在新视窗开启)"
+		href="http://www.gov.hk/tc/residents/culture/recreation/"
+		target="_blank"
+		>
+		<img width="70" 
+				height="31"
+				alt="按此瀏覽香港政府一站通"
+				src="/internet/images/footer/gov_hk.png" />
+	</a>
+		</div>
+	</div>
+</div>	<div class="page-layer hidden">
+		<div class="layer-content-blk">
+			<div class="loading hidden">
+				<img class="ajax-loading" 
+                     alt="加載中" 
+                     title="加載中" 
+                     src="/internet/images/ajax-loader.gif"/><br>
+				<span class="layer-desc">請稍候...</span>
+			</div>
+			<div class="seatplan-draggable hidden">
+				<img class="ajax-loading"
+				     alt="加載中"
+				     title="加載中"
+				     src="/internet/images/seatplan/drag.png" /><br>
+				<span class="layer-desc">提示: 如座位表過大，可用滑鼠於空白位置拖曳以瀏覽其他位置。</span>
+			</div>
+			<div class="seatplan-alternative-seat hidden">
+				<div class="result-content">
+					<table id="alternative-seat-result-tbl"></table>
+					<div id="alternative-pick-btn-blk">
+						<div class="pick-alternative-seat-result-btn cursor-pointer hidden">
+	<div class="btn-outer-blk cursor-pointer">
+		<div class="btn-inner-blk">
+			<span tabindex="0">
+選擇			</span>
+		</div>
+	</div>
+						</div>
+					</div>
+					<div class="cancel-alternative-seat-result-btn cursor-pointer">
+	<div class="btn-outer-blk cursor-pointer">
+		<div class="btn-inner-blk">
+			<span tabindex="0">
+取消			</span>
+		</div>
+	</div>
+					</div>
+					<p>&nbsp;</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		</body>
+	</html>
